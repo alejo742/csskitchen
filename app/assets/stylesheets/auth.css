@@ -1,0 +1,57 @@
+:root {
+    --colorPrimary: #E6E9DF;
+    --colorSecondary: #000;
+    --accentPrimary: #F5BC63;
+    --accentSecondary: #245F4C;
+}
+
+.auth-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.auth-section {
+    width: min(90%, 22rem);
+    height: min(100vh, 100dvh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.auth-app-logo {
+    height: 5.5rem;
+    transition: all 0.3s;
+}
+.auth-app-logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.auth-section > h1 {
+    color: #245F4C;
+    text-align: center;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Modak';
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 80%;
+}
+.auth-section > p {
+    color: #484848;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 80%;
+    margin-bottom: 3rem;
+}
+.google-sign-in-button {
+    width: 100%;
+    height: auto;
+    border-radius: 1000rem;
+    transition: all 0.3s;
+}
+.google-sign-in-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
