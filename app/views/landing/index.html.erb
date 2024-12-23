@@ -1,1 +1,36 @@
-<h1>Landing goes here</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag "landing", "data-turbo-track": "reload" %>
+
+    <title>CSS Kitchen | Where CSS meets food.</title>
+</head>
+<body data-controller="landing">
+    <header>
+        <nav>
+            <%= image_tag "logo.svg", alt: "CSS Kitchen Logo" %>
+            <%= link_to auth_path do %>
+                <%= image_tag "landing/cook-button.svg", alt: "Cook Button" %>
+            <% end %>
+        </nav>
+        <section class="hero-section">
+            <%= image_tag 'landing/food-1.svg', class: 'food-prop food-prop-1' %>
+            <%= image_tag 'landing/food-2.svg', class: 'food-prop food-prop-2' %>
+            <h1>
+                <span>
+                    <strong>CSS</strong> but
+                </span>
+                TASTY!
+            </h1>
+            <div class="hero-action-container">
+                <p>Made by a <a href="https://alejandromanrique.dev">purist</a>, for<br>non-purists.</p>
+                <%= link_to auth_path do %>
+                    <%= image_tag "landing/try-button.svg", alt: "Cook Button" %>
+                <% end %>
+            </div>
+        </section>
+    </header>
+</body>
+</html>

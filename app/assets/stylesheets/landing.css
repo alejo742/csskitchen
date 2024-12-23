@@ -1,0 +1,204 @@
+:root {
+    --colorPrimary: #E6E9DF;
+    --colorSecondary: #000;
+    --accentPrimary: #F5BC63;
+    --accentSecondary: #245F4C;
+}
+
+header {
+    height: max(100dvh, 100vh); /* 100% of the viewport height or 100vh */
+    background: #E6E9DF;
+    display: flex;
+    flex-direction: column;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5vw;
+}
+header nav > img {
+    height: 5rem;
+    width: auto;
+    transition: all 0.3s;
+}
+header nav > img:hover {
+    cursor: pointer;
+    transform: scale(1.06);
+}
+header nav > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+header nav > a img {
+    height: 4rem;
+    width: auto;
+}
+header nav a:hover {
+    transform: scale(1.06);
+}
+
+.hero-section {
+    margin: 2rem 1rem;
+    padding: 4rem calc(2vw + 1.5rem);
+    height: 100%;
+    position: relative;
+    border-radius: 5rem;
+    background: #F5BC63;
+    box-shadow: 0.2rem 0.2rem 0.6rem 0.4rem rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25%;
+    overflow: hidden; 
+}
+.food-prop {
+    position: absolute;
+    top: 0;
+    height: auto;
+}
+.food-prop-1 {
+    left: 0;
+    width: auto;
+    height: 18rem;
+}
+.food-prop-2 {
+    right: 0;
+    width: auto;
+    height: 13rem;
+}
+.hero-section h1 {
+    color: #E6E9DF;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Modak';
+    font-size: 20rem;
+    font-weight: 400;
+    line-height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+.hero-section h1 span {
+    color: #222;
+    font-family: 'Modak';
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 80%;
+    display: flex;
+    gap: 1.5rem;
+}
+.hero-section h1 span strong {
+    color: #245F4C;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Modak';
+    font-size: 6rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hero-action-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.hero-action-container p {
+    color: #222;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 120%;
+}
+.hero-action-container p a {
+    color: #222;
+    font-weight: 500;
+    line-height: 120%;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}
+.hero-action-container a {
+    transition: all 0.3s;
+}
+.hero-action-container a:hover {
+    transform: scale(1.06);
+}
+.hero-action-container a img {
+    height: 6rem;
+    width: auto;
+}
+
+@media only screen and (max-width: 770px) {
+    .hero-section h1 {
+        font-size: 15rem;
+    }
+    .hero-section h1 span strong {
+        font-size: 5rem;
+    }
+    .hero-action-container p {
+        font-size: 1.4rem;
+    }
+    .food-prop-1 {
+        height: 15rem;
+    }
+    .food-prop-2 {
+        height: 10rem;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .hero-section {
+        gap: 35%;
+    }
+    .hero-section h1 {
+        font-size: 12rem;
+    }
+    .hero-section h1 span {
+        font-size: 2.5rem;
+    }
+    .hero-section h1 span strong {
+        font-size: 4rem;
+    }
+    .hero-action-container p {
+        font-size: 1.4rem;
+    }
+    .food-prop-1 {
+        height: 13rem;
+    }
+    .food-prop-2 {
+        height: 8.5rem;
+    }
+    .hero-action-container a img {
+        height: 4.5rem;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .hero-section h1 {
+        font-size: 10rem;
+    }
+    .hero-section h1 span {
+        font-size: 2.2rem;
+    }
+    .hero-section h1 span strong {
+        font-size: 3.5rem;
+    }
+    .hero-action-container p {
+        font-size: 1.2rem;
+    }
+    .food-prop-1 {
+        height: 11.5rem;
+    }
+    .food-prop-2 {
+        height: 7.5rem;
+    }
+}
