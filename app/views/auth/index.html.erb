@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +15,7 @@
             <% end %>
             <h1>Learn pure CSS the fun way.</h1>
             <p>Why read docs if you can cook?</p>
-            <%= link_to "/auth/google", class: "google-sign-in-button" do %>
+            <%= link_to sign_in_path, class: "google-sign-in-button", method: :post do %>
                 <%= image_tag 'auth/google-button.svg' %>
             <% end %>
         </section>

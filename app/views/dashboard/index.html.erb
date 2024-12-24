@@ -1,0 +1,4 @@
+<h1>Dashboard</h1>
+<p>Welcome, <%= @user.name %>!</p>
+<p>Your email: <%= @user.email %></p>
+<%= button_to 'Logout', sign_out_path, method: :delete %>
