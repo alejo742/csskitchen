@@ -1,0 +1,24 @@
+/* app/assets/stylesheets/footer.css */
+footer {
+    background-color: #222;
+    padding: 2rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+footer p {
+    color: #808080;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 120%;
+}
+footer img {
+    height: 4rem;
+}
+@media only screen and (max-width: 550px) {
+    footer {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+}

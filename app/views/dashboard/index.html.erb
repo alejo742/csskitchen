@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag 'reset' %>
     <%= stylesheet_link_tag 'shared/_navbar' %>
+    <%= stylesheet_link_tag 'shared/_footer' %>
     <%= stylesheet_link_tag 'dashboard' %>
     <title>Dashboard | CSS Kitchen</title>
 </head>
 <body data-controller="dashboard">
     <%= render 'shared/navbar', user_name_data: @user_name_data %>
+
+    <main></main>
+
+    <%= render 'shared/footer' %>
 </body>
 </html>
