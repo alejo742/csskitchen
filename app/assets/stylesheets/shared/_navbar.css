@@ -1,0 +1,95 @@
+:root {
+    --colorPrimary: #E6E9DF;
+    --colorSecondary: #000;
+    --accentPrimary: #F5BC63;
+    --accentSecondary: #245F4C;
+}
+
+.main-navbar {
+    width: 100%;
+    padding: 1rem 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E6E9DF;
+}
+
+.navbar-logo {
+    height: 5rem;
+    transition: all 0.3s;
+}
+.navbar-logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.navbar-profile {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 5rem 4rem 6rem 10rem;
+    background: #245F4C;
+    box-shadow: 1px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
+.navbar-profile:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.user-name-initial {
+    position: absolute;
+    font-family: 'Modak';
+    user-select: none;
+}
+.user-name-initial.first {
+    font-size: 4rem;
+    top: 0.5rem;
+    left: 1.3rem;
+    color: #E6E9DF;
+    z-index: 2;
+}
+.user-name-initial.last {
+    font-size: 3rem;
+    top: 2.3rem;
+    right: 1.1rem;
+    color: #F5BC63;
+}
+
+.profile-dropdown {
+    visibility: hidden;
+    position: absolute;
+    bottom: -5rem;
+    right: 0;
+    border-radius: 1rem;
+    border: 1px solid #CECECE;
+    background: #FFF;
+    box-shadow: 0.2rem 0.2rem 2rem 1rem rgba(0, 0, 0, 0.20);
+    z-index: 1000;
+}
+
+.profile-dropdown a {
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #222;
+    font-size: 1.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.profile-dropdown a:hover {
+    cursor: pointer;
+}
+
+.profile-dropdown .material-symbols-outlined {
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+.profile-dropdown.visible {
+    visibility: visible;
+}

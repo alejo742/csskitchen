@@ -1,4 +1,14 @@
-<h1>Dashboard</h1>
-<p>Welcome, <%= @user.name %>!</p>
-<p>Your email: <%= @user.email %></p>
-<%= button_to 'Logout', sign_out_path, method: :delete %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag 'reset' %>
+    <%= stylesheet_link_tag 'shared/_navbar' %>
+    <%= stylesheet_link_tag 'dashboard' %>
+    <title>Dashboard | CSS Kitchen</title>
+</head>
+<body data-controller="dashboard">
+    <%= render 'shared/navbar', user_name_data: @user_name_data %>
+</body>
+</html>
