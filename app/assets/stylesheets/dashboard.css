@@ -4,3 +4,129 @@
     --accentPrimary: #F5BC63;
     --accentSecondary: #245F4C;
 }
+
+main {
+    background-color: #E6E9DF;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.cook-section {
+    border-radius: 2rem;
+    background: radial-gradient(50% 50% at 50% 50%, #333 0%, #222 100%);
+    padding: 8rem 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+}
+.cook-section h1 {
+    color: #F5BC63;
+    font-family: 'Modak';
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 80%;
+}
+.cook-ui {
+    border-radius: 1000rem;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.cook-icon {
+    color: #222;
+    font-size: 2.5rem;
+    margin-left: 2.5rem;
+}
+.cook-search-input {
+    padding: 1rem;
+    border: none;
+    background-color: transparent;
+    color: #484848;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-right: 2rem;
+}
+.cook-search-input::placeholder {
+    color: #8C8C8C;
+}
+.cook-input-divider {
+    width: 1px;
+    height: 4rem;
+    background-color: #BFBFBF;
+}
+.cook-difficulty-select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background: url('/assets/dashboard/arrow-dropdown.svg') no-repeat right center;
+    background-size: 3rem;
+    padding: 1rem 2.5rem 1rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    color: #484848;
+    cursor: pointer;
+}
+.cook-difficulty-select:focus, .cook-search-input:focus {
+    outline: none;
+}
+.cook-difficulty-select option {
+    padding: 0.5rem 1rem;
+    color: #484848;
+    background-color: #fff;
+    accent-color: #f0f0f0;
+}
+.cook-search-button {
+    border: none;
+    border-radius: 0 1000rem 1000rem 0;
+    padding: 0 2.4rem;
+    background-color: #245F4C;
+    height: 6rem;
+    color: #FFF;
+    font-family: 'Modak';
+    font-size: 2rem;
+    font-weight: 400;
+    transition: all 0.3s;
+}
+.cook-search-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.cook-random {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.cook-random h2 {
+    color: #E6E9DF;
+    text-align: center;
+    font-family: "Space Grotesk";
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.cook-random-button {
+    border: none;
+    border-radius: 1000rem;
+    padding: 0.7rem 0.8rem;
+    background-color: #F5BC63;
+    transition: all 0.3s;
+}
+.cook-random-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.cook-random-button span {
+    transform: rotate(45deg);
+    color: #222;
+    font-size: 2.6rem;
+}

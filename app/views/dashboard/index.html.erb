@@ -12,7 +12,37 @@
 <body data-controller="dashboard">
     <%= render 'shared/navbar', user_name_data: @user_name_data %>
 
-    <main></main>
+    <main>
+        <div class="cook-section">
+            <h1>What do you feel like cooking?</h1>
+
+            <div class="cook-ui">
+                <span class="material-symbols-outlined cook-icon">
+                    fork_spoon
+                </span>
+                <input type="text" placeholder="Italian, vegetarian, jungle..." class="cook-search-input">
+
+                <div class="cook-input-divider"></div>
+
+                <select class="cook-difficulty-select" required>
+                    <option value="easy" selected>Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <button class="cook-search-button">Cook!</button>
+            </div>
+
+            <div class="cook-random">
+                <h2>Or let us surprise you!</h2>
+                <button class="cook-random-button"> 
+                    <span class="material-symbols-outlined">
+                        casino
+                    </span>
+                </button>
+            </div>
+        </div>
+    </main>
 
     <%= render 'shared/footer' %>
 </body>
