@@ -5,7 +5,11 @@
     --accentSecondary: #245F4C;
 }
 
+main {
+    padding-top: 10rem;
+}
 .main-navbar {
+    position: fixed;
     width: 100%;
     padding: 1rem 5vw;
     display: flex;

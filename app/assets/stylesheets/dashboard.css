@@ -5,14 +5,16 @@
     --accentSecondary: #245F4C;
 }
 
-main {
+body {
     background-color: #E6E9DF;
-    padding: 3rem 0;
+}
+main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 .cook-section {
+    margin: 0 max(1vw, 1rem);
     border-radius: 2rem;
     background: radial-gradient(50% 50% at 50% 50%, #333 0%, #222 100%);
     padding: 8rem 20vw;
@@ -37,7 +39,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5vw;
 }
 .cook-icon {
     color: #222;
@@ -68,7 +70,7 @@ main {
 
     background: url('/assets/dashboard/arrow-dropdown.svg') no-repeat right center;
     background-size: 3rem;
-    padding: 1rem 2.5rem 1rem 1.5rem;
+    padding: 1rem calc(1vw + 1rem) 1rem calc(0.5vw + 1rem);
     border: none;
     border-radius: 1rem;
     font-size: 1.6rem;
@@ -87,7 +89,7 @@ main {
 .cook-search-button {
     border: none;
     border-radius: 0 1000rem 1000rem 0;
-    padding: 0 2.4rem;
+    padding: 0 calc(1vw + 1rem);
     background-color: #245F4C;
     height: 6rem;
     color: #FFF;
@@ -129,4 +131,51 @@ main {
     transform: rotate(45deg);
     color: #222;
     font-size: 2.6rem;
+}
+@media only screen and (max-width: 1000px) {
+    .cook-section {
+        padding: 8rem 10vw;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .cook-section {
+        padding: 8rem 5vw;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .cook-section {
+        padding: 8rem 2.5vw;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .cook-icon {
+        font-size: 2rem;
+        margin-left: 1.5rem;
+    }
+    .cook-search-input {
+        font-size: 1.2rem;
+    }
+    .cook-difficulty-select {
+        font-size: 1.4rem;
+    }
+    .cook-search-button {
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .cook-search-input {
+        margin-right: 1rem;
+        width: 15ch;
+    }
+}
+
+.challenges-section {
+    padding: 2rem 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+}
+.challenges-header {
+    
 }
