@@ -22,7 +22,15 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3.5rem;
+    gap: 1.5rem;
+}
+.cook-section h6 {
+    color: #F5BC63;
+    font-family: 'Modak';
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 80%;
 }
 .cook-section h1 {
     color: #F5BC63;
@@ -31,6 +39,7 @@ main {
     font-size: 3rem;
     font-weight: 400;
     line-height: 80%;
+    margin-bottom: 2rem;
 }
 .cook-ui {
     border-radius: 1000rem;
@@ -40,11 +49,15 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 1.5vw;
+    margin-bottom: 2rem;
 }
 .cook-icon {
     color: #222;
     font-size: 2.5rem;
     margin-left: 2.5rem;
+}
+.cook-input-wrapper {
+    position: relative;
 }
 .cook-search-input {
     padding: 1rem;
@@ -57,6 +70,22 @@ main {
 }
 .cook-search-input::placeholder {
     color: #8C8C8C;
+}
+.cook-input-error {
+    display: none;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    bottom: -110%;
+    left: 0;
+    border-radius: 0.4rem;
+    background-color: #FFF;
+    box-shadow: 0.2rem 0.2rem 0.4rem 0rem rgba(0, 0, 0, 0.25);
+    color: #222;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.cook-input-error.visible {
+    display: block;
 }
 .cook-input-divider {
     width: 1px;

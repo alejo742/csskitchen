@@ -14,13 +14,18 @@
 
     <main>
         <div class="cook-section">
+            <h6>In one word...</h6>
             <h1>What do you feel like cooking?</h1>
 
-            <div class="cook-ui">
+            <form class="cook-ui">
                 <span class="material-symbols-outlined cook-icon">
                     fork_spoon
                 </span>
-                <input type="text" placeholder="Italian, meat..." class="cook-search-input">
+
+                <div class="cook-input-wrapper">
+                    <input type="text" placeholder="Italian, meat..." class="cook-search-input">
+                    <span class="cook-input-error">You must input a single, valid word.</span>
+                </div>
 
                 <div class="cook-input-divider"></div>
 
@@ -30,8 +35,8 @@
                     <option value="hard">Hard</option>
                 </select>
 
-                <button class="cook-search-button">Cook!</button>
-            </div>
+                <button type="submit" class="cook-search-button">Cook!</button>
+            </form>
 
             <div class="cook-random">
                 <h2>Or let us surprise you!</h2>
