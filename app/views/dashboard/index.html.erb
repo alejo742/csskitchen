@@ -58,106 +58,26 @@
                 </div>
             </div>
             <div class="challenges-container">
+                <% @displayed_challenges.each do |challenge| %>
                 <div class="challenge-card">
                     <div class="challenge-image">
-                        <%= image_tag 'challenges/chicken-alfredo.jpeg' %>
-                        <span>
-                            Easy
-                        </span>
+                    <%= image_tag challenge.image_banner_url %> <!--a special method in case image not present-->
+                    <span>
+                        <%= challenge.difficulty.capitalize %>
+                    </span>
                     </div>
 
                     <div class="challenge-content">
-                    <h4>Chicken Alfredo</h4>
-                    <p>A simple Chicken Alfredo dish featuring little detail and beginner-friendly design.</p>
+                    <h4><%= challenge.title %></h4>
+                    <p><%= challenge.description %></p>
                     <div class="challenge-tags">
-                        <span>Pasta</span>
-                        <span>Chicken</span>
-                        <span>Italian</span>
-                        <span>American</span>
-                        <span>Alfredo</span>
+                        <% challenge.tags.each do |tag| %>
+                        <span><%= tag %></span>
+                        <% end %>
                     </div>
                     </div>
                 </div>
-                <div class="challenge-card">
-                    <div class="challenge-image">
-                        <%= image_tag 'challenges/chicken-alfredo.jpeg' %>
-                        <span>
-                            Easy
-                        </span>
-                    </div>
-
-                    <div class="challenge-content">
-                    <h4>Chicken Alfredo</h4>
-                    <p>A simple Chicken Alfredo dish featuring little detail and beginner-friendly design.</p>
-                    <div class="challenge-tags">
-                        <span>Pasta</span>
-                        <span>Chicken</span>
-                        <span>Italian</span>
-                        <span>American</span>
-                        <span>Alfredo</span>
-                    </div>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-image">
-                        <%= image_tag 'challenges/chicken-alfredo.jpeg' %>
-                        <span>
-                            Easy
-                        </span>
-                    </div>
-
-                    <div class="challenge-content">
-                    <h4>Chicken Alfredo</h4>
-                    <p>A simple Chicken Alfredo dish featuring little detail and beginner-friendly design.</p>
-                    <div class="challenge-tags">
-                        <span>Pasta</span>
-                        <span>Chicken</span>
-                        <span>Italian</span>
-                        <span>American</span>
-                        <span>Alfredo</span>
-                    </div>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-image">
-                        <%= image_tag 'challenges/chicken-alfredo.jpeg' %>
-                        <span>
-                            Easy
-                        </span>
-                    </div>
-
-                    <div class="challenge-content">
-                    <h4>Chicken Alfredo</h4>
-                    <p>A simple Chicken Alfredo dish featuring little detail and beginner-friendly design.</p>
-                    <div class="challenge-tags">
-                        <span>Pasta</span>
-                        <span>Chicken</span>
-                        <span>Italian</span>
-                        <span>American</span>
-                        <span>Alfredo</span>
-                    </div>
-                    </div>
-                </div>
-                <div class="challenge-card">
-                    <div class="challenge-image">
-                        <%= image_tag 'challenges/chicken-alfredo.jpeg' %>
-                        <span>
-                            Easy
-                        </span>
-                    </div>
-
-                    <div class="challenge-content">
-                    <h4>Chicken Alfredo</h4>
-                    <p>A simple Chicken Alfredo dish featuring little detail and beginner-friendly design.</p>
-                    <div class="challenge-tags">
-                        <span>Pasta</span>
-                        <span>Chicken</span>
-                        <span>Italian</span>
-                        <span>American</span>
-                        <span>Alfredo</span>
-                    </div>
-                    </div>
-                </div>
+                <% end %>
             </div>
         </div>
     </main>

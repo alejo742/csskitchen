@@ -278,6 +278,7 @@ main {
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 3rem;
+    filter: brightness(0.6);
 }
 .challenge-image span {
     position: absolute;

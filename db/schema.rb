@@ -10,9 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_12_24_052854) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_05_001618) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challenges", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "description", null: false
+    t.string "tags", default: [], array: true
+    t.string "difficulty", null: false
+    t.string "image_banner"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_challenges_on_user_id"
+    t.check_constraint "difficulty::text = ANY (ARRAY['easy'::character varying, 'medium'::character varying, 'hard'::character varying]::text[])", name: "difficulty_check"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
@@ -24,4 +37,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_12_24_052854) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "challenges", "users"
 end
