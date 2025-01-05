@@ -38,5 +38,25 @@ export default class extends Controller {
       }
     });
 
+    // conditionally render challenges
+    const categories = document.querySelectorAll('.challenge-categories .category');
+    const challengeCards = document.querySelectorAll('.challenge-card');
+
+    categories.forEach(category => {
+        category.addEventListener('click', function() {
+            categories.forEach(cat => cat.classList.remove('active')); // remove active class
+            category.classList.add('active');
+
+            const selectedCategory = category.getAttribute('data-category');
+            // show cards that match the selected category
+            challengeCards.forEach(card => {
+                if (selectedCategory === 'all' || card.getAttribute('data-category') === selectedCategory) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
   }
 }

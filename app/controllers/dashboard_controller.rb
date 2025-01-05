@@ -10,6 +10,8 @@ class DashboardController < ApplicationController
         }
 
         # challenges data
-        @displayed_challenges = Challenge.all
+        @all_challenges = Challenge.all
+        @user_challenges = Challenge.where(user: @user)
+        @others_challenges = @all_challenges - @user_challenges
     end
 end
