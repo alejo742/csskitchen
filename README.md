@@ -1,6 +1,5 @@
 # CSS Kitchen (live [here!](https://csskitchen.onrender.com))
 
-
 ## Welcome!
 
 This is CSS Kitchen, a full-stack, interactive web application that helps beginners practice their CSS (and HTML) with fun food-based challenges. 
@@ -25,8 +24,10 @@ Before running this project, ensure you have the following installed:
 
 - Ruby 3.3.4 (the exact version specified in `.ruby-version`)
 - Bundler
-- Node.js LTS
+- Node.js LTS and Yarn (preferred)
 - PostgreSQL 16
+
+*If you encounter any issues during installation, go to the last section of this document.*
 
 ### Setup Instructions (bash)
 
@@ -45,7 +46,7 @@ Before running this project, ensure you have the following installed:
 
     1. Create a new PostgreSQL user called `csskitchen`:
 
-        Access your PSQL terminal with your admin user and run the following command:
+        With PostgreSQL installed, access your PSQL terminal with your admin user and run the following command:
 
         ```sql
         CREATE USER csskitchen WITH PASSWORD 'csskitchen742';
@@ -121,3 +122,11 @@ Before running this project, ensure you have the following installed:
 - **Other issues**
 
     Please refer to the getting-started documentation of Ruby, Rails or PostgreSQL for your operating system.
+
+    - Installing Ruby: [link](https://www.ruby-lang.org/en/documentation/installation/)
+
+    - Installing PostgreSQL: [link](https://www.postgresql.org/download/)
+
+    - Installing NodeJS: [link](https://nodejs.org/en)
+
+    - A checklist to setting up a cloned Rails project (most steps are not necessary though): [link](https://dev.to/w3ndo/a-checklist-for-setting-up-a-cloned-rails-application-locally-5468)
