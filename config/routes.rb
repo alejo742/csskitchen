@@ -14,4 +14,7 @@ Rails.application.routes.draw do
 
   # Dashboard
   get 'dashboard', to: 'dashboard#index'
+
+  # Challenges
+  get 'challenge_creator', to: 'challenge_creator#index'
 end

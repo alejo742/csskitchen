@@ -17,34 +17,30 @@
             <h6>In one word...</h6>
             <h1>What do you feel like cooking?</h1>
 
-            <form class="cook-ui">
+            <%= form_with url: challenge_creator_path, method: :get, class: "cook-ui" do %>
                 <span class="material-symbols-outlined cook-icon">
                     fork_spoon
                 </span>
 
                 <div class="cook-input-wrapper">
-                    <input type="text" placeholder="Italian, meat..." class="cook-search-input">
+                    <%= text_field_tag :query, nil, placeholder: "Italian, meat...", class: "cook-search-input" %>
                     <span class="cook-input-error">You must input a single, valid word.</span>
                 </div>
 
                 <div class="cook-input-divider"></div>
 
-                <select class="cook-difficulty-select" required>
-                    <option value="easy" selected>Easy</option>
-                    <option value="medium">Medium</option>
-                    <option value="hard">Hard</option>
-                </select>
+                <%= select_tag :difficulty, options_for_select([['Easy', 'easy'], ['Medium', 'medium'], ['Hard', 'hard']], 'easy'), class: "cook-difficulty-select", required: true %>
 
-                <button type="submit" class="cook-search-button">Cook!</button>
-            </form>
+                <%= submit_tag "Cook!", class: "cook-search-button" %>
+            <% end %>
 
             <div class="cook-random">
                 <h2>Or let us surprise you!</h2>
-                <button class="cook-random-button"> 
+                <%= link_to challenge_creator_path(random: true), class: "cook-random-button" do %>
                     <span class="material-symbols-outlined">
                         casino
                     </span>
-                </button>
+                <% end %>
             </div>
         </div>
 
