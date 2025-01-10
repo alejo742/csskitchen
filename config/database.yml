@@ -3,7 +3,8 @@ default: &default
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: csskitchen
-  password: <%= Rails.application.credentials.dig(:csskitchen, :database_password) %>
+  #password: <%= Rails.application.credentials.dig(:csskitchen, :database_password) %>
+  url: <%= Rails.application.credentials.dig(:csskitchen, :database_url) %>
 
 development:
   <<: *default
@@ -16,4 +17,4 @@ test:
 production:
   <<: *default
   database: csskitchen
-  url: <%= ENV["CSSKITCHEN_DATABASE_URL"] %> # Available on Render's environment variables, not necessary locally.
+  url: <%= ENV["INTERNAL_DATABASE_URL"] %> # Available on Render's environment variables, not necessary locally.
