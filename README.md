@@ -42,9 +42,15 @@ Before running this project, ensure you have the following installed:
 
 2. **Set up credentials**
 
-    As specified in the `config/database.yml` file, the authorized database user is `csskitchen`, and its password is digged from the encrypted credentials file. Other private keys are also stored in the credentials file. For the database and services to work, you must:
+    As specified in the `config/database.yml` file, the authorized database user is `csskitchen`, and its URL is digged from the encrypted credentials file. Other private keys are also stored in the credentials file. For the database and services to work, you must:
+    
+    1. Place the decryption master key within the `config` directory:
 
-    1. Create a new PostgreSQL user called `csskitchen`:
+        Download the file from [here](https://drive.google.com/file/d/17K4wkYhXgf4bmKNei4g-SYL6-cBY1Iy9/view?usp=sharing)
+
+    With this, Rails should be able to decrypt the credentials and access the database
+
+    2. (OPTIONAL) If you want to create your own local database to test away from production:
 
         With PostgreSQL installed, access your PSQL terminal with your admin user and run the following command:
 
@@ -57,12 +63,19 @@ Before running this project, ensure you have the following installed:
         ```sql
         ALTER USER csskitchen CREATEDB;
         ```
-    
-    2. Place the decryption master key within the `config` directory:
 
-        Download the file from [here](https://drive.google.com/file/d/17K4wkYhXgf4bmKNei4g-SYL6-cBY1Iy9/view?usp=sharing)
+        Head to `config/database.yml` and make it use the password instead of the URL:
 
-    With this, Rails should be able to decrypt the credentials and access the database
+        ```yml
+        password: <%= Rails.application.credentials.dig(:csskitchen, :database_password) %>
+        #url: <%= Rails.application.credentials.dig(:csskitchen, :database_url) %>
+        ```
+
+        Ensure PostgreSQL is running locally and setup the database:
+
+        ```bash
+        rails db:setup
+        ```
 
 3. **Install dependencies:**
 
@@ -72,19 +85,13 @@ Before running this project, ensure you have the following installed:
 	bin/setup
 	```
 
-4. **Set up the database:**
-
-	Ensure PostgreSQL is running and setup the database:
-
-	```bash
-	rails db:setup
-	```
-
-5. **Run the application locally:**
+4. **Run the application locally:**
 
 	```bash
 	rails server
 	```
+
+**DONE! This should be enough to make the application run locally**
 
 ### Troubleshooting
 
