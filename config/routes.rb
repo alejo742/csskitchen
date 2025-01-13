@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'challenge_view/index'
   # Health Check
   get "up" => "rails/health#show", as: :rails_health_check
 
@@ -17,4 +18,5 @@ Rails.application.routes.draw do
 
   # Challenges
   get 'challenge_creator', to: 'challenge_creator#index'
+  get 'challenge_view', to: 'challenge_view#index'
 end

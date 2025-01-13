@@ -1,0 +1,165 @@
+:root {
+    --colorPrimary: #E6E9DF;
+    --colorSecondary: #000;
+    --accentPrimary: #F5BC63;
+    --accentSecondary: #245F4C;
+}
+
+body {
+    background-color: #222;
+}
+.challenge-view {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.challenge-left {
+    background-color: #333;
+    padding: 3rem 2rem;
+    flex-basis: 20rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.challenge-left h2 {
+    width: 100%;
+    color: #E6E9DF;
+    font-size: 2rem;
+    font-family: 'Modak';
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.order-tabs {
+    background-color: #222;
+    border-radius: 0.8rem;
+    padding: 0.4rem 0.3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    width: 100%;
+    margin-bottom: 3.5rem;
+}
+.order-tab {
+    width: 100%;
+    border-radius: 0.6rem;
+    color: #E6E9DF;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.4rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.order-tab.active {
+    background-color: #333;
+}
+.orders-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.order {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.order-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+.order-customer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/*Ball styles for status*/
+.order-status-ball {
+    width: 1.3rem;
+    height: 0.8rem;
+    border-radius: 50%;
+}
+.order-status-ball.red {
+    background: linear-gradient(69deg, #EA4335 6.82%, #E98D85 89.77%);
+    box-shadow: 0 0 0.4rem #EA4335;
+}
+.order-status-ball.yellow {
+    background: linear-gradient(69deg, #F5BC63 6.82%, #F6C880 89.77%);
+    box-shadow: 0 0 4px #F5BC63;
+}
+.order-status-ball.green {
+    background: linear-gradient(69deg, #245F4C  6.82%, #4BC59E  89.77%);
+    box-shadow: 0 0 4px #245F4C ;
+}
+
+.order-customer h4 {
+    color: #E6E9DF;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.order-text {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.order-text p {
+    color: #E6E9DF;
+    text-align: right;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    max-height: 2rem;
+    line-height: 1rem;
+    overflow: hidden;
+}
+.order-text span {
+    color: #E6E9DF;
+    text-align: right;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+/*Buttons to disregard/acccept the orders*/
+.order-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+}
+.order-action-button {
+    border: none;
+    padding: 0.4rem 1.5rem;
+    border-radius: 0.4rem;
+    color: #E6E9DF;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.order-action-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.order-action-button.ignore {
+    background-color: #222;
+}
+.order-action-button.accept {
+    background-color: #245F4C;
+}
+.challenge-end-button {
+    margin-top: auto;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #222;
+    color: #E6E9DF;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.challenge-end-button:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}

@@ -9,15 +9,16 @@ class ChallengeCreatorController < ApplicationController
             @query = "random" #implement random challenge
             @difficulty = "easy"
         end
+        #TODO fetch challenge and then create challenge
 
-
+        # after done with everything
+        redirect_to challenge_view_path
     end
-
 
     private 
 
     def fetch_challenge 
-        # fetch from open ai
+        #TODO fetch from open ai
     end
 
     def create_challenge

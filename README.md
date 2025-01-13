@@ -8,6 +8,15 @@ This is CSS Kitchen, a full-stack, interactive web application that helps beginn
 
 When I was a beginner to CSS, it took me long to memorize all the basic properties, and it felt like boring homework. I had to build ugly websites with no purpose just for the sake of practicing, and while it helped me improve, I believe there should be a funner way of doing it. That is CSS Kitchen!
 
+### About the project itself
+
+I am mostly a TypeScript/JavaScript developer (NextJS, React Native, etc.) I have worked with Rails (the main framework) in a small project before, so it is (kinda) new to me. Some new stuff I used within this project is:
+
+- Stimulus: A JavaScript framework to manage client-side functionalities and enable interaction with Rails routes in the backend.
+- External API requests (OpenAI and ...): This allowed me to make the app flow and interaction work. It is the first time I handle raw requests and pipeline it to the backend.
+
+Figuring these out was a headache (almost 2 months of dev) but it was really fun!
+
 ### Additional information
 
 I also designed the UI/UX for the app. Available on **Figma** [here](https://www.figma.com/design/5vPWVMeLFCcTmRH8ueeGVD/CSSKitchen?node-id=0-1&t=xE0tEjm1Ntk92U9r-1)
@@ -137,3 +146,6 @@ Before running this project, ensure you have the following installed:
     - Installing NodeJS: [link](https://nodejs.org/en)
 
     - A checklist to setting up a cloned Rails project (most steps are not necessary though): [link](https://dev.to/w3ndo/a-checklist-for-setting-up-a-cloned-rails-application-locally-5468)
+
+
+(gif video of demonstration, ruby, the language, talk about it, new technology you used)

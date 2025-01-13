@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag 'reset' %>
+    <%= stylesheet_link_tag 'challenge_view' %>
+    <title>Cook!</title>
+</head>
+<body data-controller="challengeview">
+    <div class="challenge-view">
+        <div class="challenge-left">
+            <h2>Orders</h2>
+            <div class="order-tabs">
+                <div class="order-tab active">Urgent</div>
+                <div class="order-tab">Completed</div>
+            </div>
+            <div class="orders-container">
+                <div class="order urgent">
+                    <div class="order-info">
+                        <div class="order-customer">
+                            <div class="order-status-ball red"></div>
+                            <h4>Alan Turing</h4>
+                        </div>
+                        <div class="order-text">
+                            <p>
+                                Hi! I would like to order a pizza with extra cheese and pepperoni. I'm really hungry and I need it as soon as possible.
+                            </p>
+                            <span>...</span>
+                        </div>
+                    </div>
+                    <div class="order-actions">
+                        <button class="order-action-button ignore">Ignore</button>
+                        <button class="order-action-button accept">Accept</button>
+                    </div>
+                </div>
+                <div class="order completed">
+                    <div class="order-info">
+                        <div class="order-customer">
+                            <div class="order-status-ball yellow"></div>
+                            <h4>Alan Turing</h4>
+                        </div>
+                        <div class="order-text">
+                            <p>
+                                Hi! I would like to order a pizza with extra cheese and pepperoni. I'm really hungry and I need it as soon as possible.
+                            </p>
+                            <span>...</span>
+                        </div>
+                    </div>
+                    <div class="order-actions">
+                        <button class="order-action-button ignore">Ignore</button>
+                        <button class="order-action-button accept">Accept</button>
+                    </div>
+                </div>
+                <div class="order urgent">
+                    <div class="order-info">
+                        <div class="order-customer">
+                            <div class="order-status-ball green"></div>
+                            <h4>Alan Turing</h4>
+                        </div>
+                        <div class="order-text">
+                            <p>
+                                Hi! I would like to order a pizza with extra cheese and pepperoni. I'm really hungry and I need it as soon as possible.
+                            </p>
+                            <span>...</span>
+                        </div>
+                    </div>
+                    <div class="order-actions">
+                        <button class="order-action-button ignore">Ignore</button>
+                        <button class="order-action-button accept">Accept</button>
+                    </div>
+                </div>
+            </div>
+            <button class="challenge-end-button">End Challenge</button>
+        </div>
+    </div>
+</body>
+</html>
