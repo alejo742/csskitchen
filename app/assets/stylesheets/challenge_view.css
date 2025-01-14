@@ -17,6 +17,7 @@ body {
     background-color: #333;
     padding: 3rem 2rem;
     flex-basis: 20rem;
+    flex-shrink: 2;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -27,6 +28,7 @@ body {
     width: 100%;
     color: #E6E9DF;
     font-size: 2rem;
+    font-weight: 400;
     font-family: 'Modak';
     margin-bottom: 1.5rem;
     text-align: left;
@@ -162,4 +164,86 @@ body {
 .challenge-end-button:hover {
     cursor: pointer;
     transform: scale(1.03);
+}
+
+/* editor styles (Monaco Editor) */
+.challenge-editor-container {
+    flex-basis: 37rem;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: #1e1e1e;
+    border: 0.2rem solid #222;
+    height: 100%;
+    padding: 1.5rem 1rem 2rem 1rem;
+}
+.challenge-editor-container * {
+    font-family: 'Roboto Mono', monospace !important;
+}
+.challenge-editor-tabs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+.editor-tab {
+    height: 4rem;
+    width: 100%;
+    border-radius: 0.4rem;
+    background-color: #333;
+    color: #E6E9DF;
+    transition: all 0.3s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.editor-tab:hover {
+    cursor: pointer;
+    height: 4.5rem;
+}
+.editor-tab.active {
+    font-size: 1.4rem;
+    height: 4.5rem;
+    background-color: #E6E9DF;
+    color: #222;
+}
+.challenge-editor {
+    height: 100%;
+    display: none;
+}
+.challenge-editor.active {
+    display: initial;
+}
+.challenge-editor-actions {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.editor-action {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.6rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.editor-action:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: scale(1.03);
+}
+.editor-action.cancel {
+    background-color: #EA4335;
+    color: #E6E9DF;
+}
+.editor-action.deliver {
+    background-color: #245F4C;
+    color: #E6E9DF;
 }
