@@ -427,3 +427,64 @@ body {
         font-size: 55%;
     }
 }
+
+/* Overlay styles for popups */
+.challenge-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.challenge-overlay.visible {
+    display: flex;
+}
+.challenge-popup {
+    max-width: 40rem;
+    background-color: #E6E9DF;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+.challenge-popup h2 {
+    color: #222;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Modak';
+    text-align: center;
+}
+.challenge-popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+.popup-button {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+.popup-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+.popup-button.negative {
+    background-color: #EA4335;
+    color: #E6E9DF;
+}
+.popup-button.positive {
+    background-color: #245F4C;
+    color: #E6E9DF;
+}
