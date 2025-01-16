@@ -17,7 +17,8 @@ body {
     background-color: #333;
     padding: 3rem 2rem;
     flex-basis: 20rem;
-    flex-shrink: 2;
+    flex-shrink: 1;
+    flex-grow: 1.5;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -169,14 +170,15 @@ body {
 /* editor styles (Monaco Editor) */
 .challenge-editor-container {
     flex-basis: 37rem;
-    flex-shrink: 1;
+    flex-shrink: 2;
+    flex-grow: 1.5;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     background-color: #1e1e1e;
     border: 0.2rem solid #222;
     height: 100%;
-    padding: 1.5rem 1rem 2rem 1rem;
+    padding: 1.5rem 1.2vw 2rem 1.2vw;
 }
 .challenge-editor-container * {
     font-family: 'Roboto Mono', monospace !important;
@@ -246,4 +248,182 @@ body {
 .editor-action.deliver {
     background-color: #245F4C;
     color: #E6E9DF;
+}
+
+/* challenge visual representation styles */
+.challenge-visual-container {
+    flex-basis: 40rem;
+    flex-shrink: 1.5;
+    flex-grow: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: #222;
+    height: 100%;
+    padding-top: 10rem;
+}
+.challenge-visual {
+    aspect-ratio: 1/1;
+    width: 80%;
+    max-width: 80%;
+    height: auto;
+    background-color: #F5BC63;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.challenge-plate {
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    border-radius: 1000rem;
+    background: #FFF;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.challenge-plate-inner {
+    width: 90%;
+    height: 90%;
+    border-radius: 1000rem;
+    border: 1rem solid #E6E9DF;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.challenge-current {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.challenge-current h3 {
+    border-radius: 1rem 1rem 0 0;
+    padding: 0.5rem 5rem;
+    background-color: #333;
+    color: #E6E9DF;
+    font-size: 1.4rem;
+    font-family: 'Modak';
+    text-align: center;
+    font-weight: 400;
+}
+.challenge-current p {
+    border-radius: 2rem 0 0 0;
+    padding: 2rem 4rem;
+    background-color: #444;
+    color: #E6E9DF;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* challenge right panel styles */
+.challenge-right {
+    margin-left: auto;
+    flex-basis: 25rem;
+    flex-shrink: 1.5;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.challenge-help {
+    padding: 2rem calc(0.5rem + 1vw);
+    background-color: #333;
+    border-radius: 0 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+}
+.challenge-help h2 {
+    color: #E6E9DF;
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: 'Modak';
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.challenge-sample-image {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 1rem;
+    margin-bottom: 0.7rem;
+}
+.challenge-help h4 {
+    color: #E6E9DF;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+.challenge-help span {
+    color: #E6E9DF;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.challenge-help-colors {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.challenge-help-colors h5 {
+    width: 100%;
+    color: #E6E9DF;
+    font-size: 1.2rem;
+    font-family: 'Modak';
+    font-weight: 400;
+    text-align: left;
+}
+.challenge-color-editor {
+    height: 12rem;
+    width: 17rem;
+    background-color: #1e1e1e;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.challenge-color-editor * {
+    font-family: 'Roboto Mono', monospace !important;
+}
+.challenge-score-container {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.challenge-score-container h3 {
+    border-radius: 1rem 0 0 0;
+    padding: 0.5rem 5rem;
+    background-color: #333;
+    color: #E6E9DF;
+    font-size: 1.4rem;
+    font-family: 'Modak';
+    text-align: center;
+    font-weight: 400;
+}
+.challenge-score-container span {
+    width: 100%;
+    border-radius: 2rem 0 0 0;
+    padding: 2rem 4rem;
+    background-color: #444;
+    color: #E6E9DF;
+    font-family: 'Modak';
+    font-size: 6rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    html {
+        font-size: 55%;
+    }
 }
