@@ -1,17 +1,25 @@
 <nav class="main-navbar" data-controller="shared/navbar">
     <%= image_tag 'logo.svg', class: 'navbar-logo' %>
 
-    <div class="navbar-profile">
-        <span class="user-name-initial first"><%= user_name_data[:first_initial] %></span>
-        <span class="user-name-initial last"><%= user_name_data[:last_initial] %></span>
+    <div class="navbar-user">
+        <span class="user-score">
+            Score: 
+            <strong>
+                <%= user_data[:score] %>
+            </strong>
+        </span>
+        <div class="navbar-profile">
+            <span class="user-name-initial first"><%= user_data[:first_initial] %></span>
+            <span class="user-name-initial last"><%= user_data[:last_initial] %></span>
 
-        <div class="profile-dropdown">
-            <%= link_to sign_out_path, method: :delete do %>
-                <span class="material-symbols-outlined">
-                    move_item
-                </span>
-                <span>Sign Out</span>
-            <% end %>
+            <div class="profile-dropdown">
+                <%= link_to sign_out_path, method: :delete do %>
+                    <span class="material-symbols-outlined">
+                        move_item
+                    </span>
+                    <span>Sign Out</span>
+                <% end %>
+            </div>
         </div>
     </div>
 </nav>

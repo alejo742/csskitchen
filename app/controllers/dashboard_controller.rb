@@ -4,9 +4,10 @@ class DashboardController < ApplicationController
     def index
         # user data
         @user = current_user
-        @user_name_data = {
+        @user_data = {
             first_initial: "#{@user.first_name[0]}",
-            last_initial: "#{@user.last_name[0]}"
+            last_initial: "#{@user.last_name[0]}",
+            score: "#{@user.score}"
         }
 
         # challenges data
