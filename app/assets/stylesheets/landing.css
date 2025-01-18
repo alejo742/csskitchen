@@ -43,6 +43,7 @@ header nav a:hover {
 .hero-section {
     margin: 2rem 1rem;
     padding: 4rem calc(2vw + 1.5rem);
+    padding-top: 20%;
     height: 100%;
     position: relative;
     border-radius: 5rem;
