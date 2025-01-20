@@ -23,7 +23,7 @@
                 </span>
 
                 <div class="cook-input-wrapper">
-                    <%= text_field_tag :query, nil, placeholder: "Italian, meat...", class: "cook-search-input" %>
+                    <%= text_field_tag :query, nil, placeholder: "Italian, meat...", class: "cook-search-input", required: true %>
                     <span class="cook-input-error">You must input a single, valid word.</span>
                 </div>
 
@@ -55,9 +55,9 @@
             </div>
             <div class="challenges-container">
                 <% @all_challenges.each do |challenge| %>
-                <div class="challenge-card" data-category="all">
+                <div class="challenge-card" data-category="all" data-challenge-path="<%= challenges_path(challenge_id: challenge.id) %>">
                     <div class="challenge-image">
-                        <%= image_tag challenge.image_banner_url %>
+                        <%= image_tag challenge_image(challenge) %>
                         <span><%= challenge.difficulty.capitalize %></span>
                     </div>
                     <div class="challenge-content">
@@ -73,9 +73,9 @@
                 <% end %>
 
                 <% @user_challenges.each do |challenge| %>
-                <div class="challenge-card" data-category="by_you">
+                <div class="challenge-card" data-category="by_you" data-challenge-path="<%= challenges_path(challenge_id: challenge.id) %>">
                     <div class="challenge-image">
-                        <%= image_tag challenge.image_banner_url %>
+                        <%= image_tag challenge_image(challenge) %>
                         <span><%= challenge.difficulty.capitalize %></span>
                     </div>
                     <div class="challenge-content">
@@ -91,9 +91,9 @@
                 <% end %>
 
                 <% @others_challenges.each do |challenge| %>
-                <div class="challenge-card" data-category="by_others">
+                <div class="challenge-card" data-category="by_others" data-challenge-path="<%= challenges_path(challenge_id: challenge.id) %>">
                     <div class="challenge-image">
-                        <%= image_tag challenge.image_banner_url %>
+                        <%= image_tag challenge_image(challenge) %>
                         <span><%= challenge.difficulty.capitalize %></span>
                     </div>
                     <div class="challenge-content">
