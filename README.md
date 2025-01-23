@@ -1,6 +1,6 @@
 # CSS Kitchen (live [here!](https://csskitchen.onrender.com))
 
-## Welcome!
+## Welcome! (DALI API Challenge)
 
 This is CSS Kitchen, a full-stack, interactive web application that helps beginners practice their CSS (and HTML) with fun food-based challenges. 
 
