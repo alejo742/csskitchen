@@ -4,6 +4,13 @@
 
 This is CSS Kitchen, a full-stack, interactive web application that helps beginners practice their CSS (and HTML) with fun food-based challenges. 
 
+### Quick demo:
+
+GIF demo:
+![](https://github.com/alejo742/csskitchen/blob/master/public/dali-video-gif.gif)
+
+Full demo [here](https://drive.google.com/file/d/1kF1j81Tg7KBWeHTRGPpXkRIKXLJONp6u/view?usp=sharing):
+
 ### How the idea came up
 
 When I was a beginner to CSS, it took me long to memorize all the basic properties, and it felt like boring homework. I had to build ugly websites with no purpose just for the sake of practicing, and while it helped me improve, I believe there should be a funner way of doing it. That is CSS Kitchen!
@@ -12,10 +19,17 @@ When I was a beginner to CSS, it took me long to memorize all the basic properti
 
 I am mostly a TypeScript/JavaScript developer (NextJS, React Native, etc.) I have worked with Rails (the main framework) in a small project before, so it is (kinda) new to me. Some new stuff I used within this project is:
 
-- Stimulus: A JavaScript framework to manage client-side functionalities and enable interaction with Rails routes in the backend.
-- External API requests (OpenAI and ...): This allowed me to make the app flow and interaction work. It is the first time I handle raw requests and pipeline it to the backend.
+- Stimulus: A JavaScript framework to manage client-side functionalities and enable interaction with Rails routes in the backend. I chose it because it integrates nicely with Rails and the HTML-based views. It also saves me the horror of the Asset Pipeline for JS files.
+- External API requests (OpenAI and CSS Validator): This allowed me to make the app flow and interaction work. It is the first time I handle raw requests and pipeline it to the backend and frontend.
+- Rails Active Storage: This is a Rails library that helps me manage attached files for my models and make my database storage easier.
 
-Figuring these out was a headache (almost 2 months of dev) but it was really fun!
+Figuring these out was a headache (almost 2 months of dev) but it was really fun! I got stuck mostly in backend tasks, like storing information of the adequate type and managing a global state within the application. For that reason, despite my initial appreciation for Rails development speed and Ruby's simplicity, I must say, I love React, Next, and TypeScript.
+
+Despite the obstacles, I learned the importance of error handling during development and of continuous testing. This made me a better developer, one that spends less time debugging and more time coding.
+
+### Potential impact
+
+I believe this project could have a great impact on intermediate CSS learners. Those who type fast enough but don't want to do a boring purposeless website. Food is a very engaging way to practice CSS once you have the properties memorized. Furthermore, even for me, a experienced CSS writer, it helped to ideate unusual solutions to achieve the best looking dishes.
 
 ### Additional information
 
@@ -146,6 +160,8 @@ Before running this project, ensure you have the following installed:
     - Installing NodeJS: [link](https://nodejs.org/en)
 
     - A checklist to setting up a cloned Rails project (most steps are not necessary though): [link](https://dev.to/w3ndo/a-checklist-for-setting-up-a-cloned-rails-application-locally-5468)
+
+    If you have problems with getting the correct Ruby version running, consider using a Version Manager like [RVM](https://rvm.io/rvm/install)
 
 
 (gif video of demonstration, ruby, the language, talk about it, new technology you used)
