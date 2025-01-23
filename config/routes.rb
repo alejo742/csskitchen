@@ -18,5 +18,13 @@ Rails.application.routes.draw do
 
   # Challenges
   get 'challenge_creator', to: 'challenge_creator#index'
-  get 'challenge_view', to: 'challenge_view#index'
+
+  get 'challenge_create', to: 'challenge_view#create',
+    constraints: lambda { |req| # we can only create if we have parameters
+      req.params[:query].present? && req.params[:difficulty].present? 
+    }
+  get 'challenges/:challenge_id', to: 'challenge_view#play', as: 'challenges'
+
+  # challenge functionality
+  post 'update_order', to: 'challenge_view#update_order'
 end

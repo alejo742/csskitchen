@@ -6,7 +6,7 @@
     <%= stylesheet_link_tag 'challenge_creator' %>
     <title>Loading...</title>
 </head>
-<body>
+<body data-controller="challengecreator" data-redirect-path="<%= challenge_create_path(query: @query, difficulty: @difficulty) %>">
     <div class="loader"></div>
     <span class="loader-text">Preparing the kitchen...</span>
 </body>
