@@ -8,10 +8,9 @@ class ChallengeViewController < ApplicationController
   def play
     @challenge = Challenge.find(params[:challenge_id])
     @challenge_orders = Order.where(id: @challenge.order_ids)
+    session[:current_score] ||= 0
     if session[:current_score] > 0
       session[:current_score] = 0
-    else
-      session[:current_score] ||= 0
     end
     @current_score = session[:current_score]
 
