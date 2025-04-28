@@ -133,7 +133,6 @@ class ChallengeViewController < ApplicationController
         prompt: image_prompt,
         model: "dall-e-2",
         size: "256x256",
-        quality: "standard",
       }
     )
 
